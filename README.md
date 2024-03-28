@@ -1,3 +1,5 @@
+This is a premade flow for handling logging in to Twitch's OAuth via their Implicit Grant flow
+
 This works by opening the twitch OAuth page in a new window.  Which then redirects to your twitch-callback page.  This passes the Implicit OAuth token back to the original page.
 The url generated has a random string passed as the state, and the Twitch Callback checks the session storage to make sure this matches before calling back.
 

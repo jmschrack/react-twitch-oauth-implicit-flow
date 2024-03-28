@@ -9,13 +9,16 @@ export default defineConfig({
     lib: {
       entry: resolve(__dirname, 'lib/main.js'),
       formats: ['es'],
+      fileName: 'main',
     },
+    copyPublicDir: false,
     rollupOptions: {
-      external: ['react', 'react-dom'],
+      external: ['react', 'react-dom','react/jsx-runtime'],
       output: {
           globals: {
               react: 'React',
               'react-dom': 'ReactDOM',
+              'react/jsx-runtime': 'react/jsx-runtime'
           },
       },
   },
