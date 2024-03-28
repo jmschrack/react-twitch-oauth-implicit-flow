@@ -8,10 +8,10 @@
   "description": "A Twitch OAuth Implicit Grant Flow for React",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jmschrack/react-twitch-oauth-implicit-flow"
+    "url": "git+https://github.com/jmschrack/react-twitch-oauth-implicit-flow.git"
   },
   "author": {
-    "name": "Jonathan Schrack" 
+    "name": "Jonathan Schrack"
   },
   "scripts": {
     "dev": "vite --port 3000",
