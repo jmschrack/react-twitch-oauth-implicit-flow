@@ -47,3 +47,23 @@ To have more control over the process, use the `<TwitchButton />`  component ins
 
 To customize the redirect page, just make your own, and call the `useTwitchCallback`  hook.  This will automatically grab the OAuth token from the URL, and post a message back to the opening window, and then attempt to close itself.
 
+# Custom UI
+
+For convenience, there are few exports based on the official Twitch branding.
+`twitchPurple` is the hex code for the color
+`TwitchIcon` is an SVG of the Twitch icon
+
+## Customize Sign-In button
+To customize the Twitch sign in button even more, create your own component:
+```
+export function CustomTwitchButton({ clientId, redirectURI, scope}) {
+    const url = useTwitchImplicitAuthUrl({ clientId, redirectURI, scope });
+    return (
+        <button  onClick={() => { const w = window.open(url); w.focus(); }} >
+
+          Sign-in
+        </button>
+    )
+}
+```
+

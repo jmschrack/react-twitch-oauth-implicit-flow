@@ -1,8 +1,16 @@
 {
   "name": "react-twitch-implicit-auth",
   "private": false,
-  "version": "1.0.0",
+  "version": "1.0.2",
   "license": "MIT",
+  "keywords": [
+    "twitch",
+    "oauth",
+    "implicit",
+    "grant",
+    "flow",
+    "react"
+  ],
   "type": "module",
   "main": "dist/main.js",
   "description": "A Twitch OAuth Implicit Grant Flow for React",

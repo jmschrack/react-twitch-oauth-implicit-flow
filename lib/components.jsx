@@ -5,13 +5,14 @@ import { getUserData, useTwitchImplicitAuthUrl, useTwitchOAuth } from "./twitch"
 
 export const twitchPurple = "#9146FF"
 /**
- * A button that will open a popup window to the twitch implicit auth url
+ * A button that will open a popup window to the twitch implicit auth url.
+ * @example <button onClick={() => { const w = window.open(useTwitchImplicitAuthUrl({clientId,redirectURI,scope})); w.focus(); }} >Sign Into Twitch</button>
  * @returns 
  */
-export function TwitchButton({ clientId, redirectURI, scope, children }) {
+export function TwitchButton({ clientId, redirectURI, scope, children,className="" }) {
     const url = useTwitchImplicitAuthUrl({ clientId, redirectURI, scope });
     return (
-        <button onClick={() => { const w = window.open(url); w.focus(); }} style={{ backgroundColor: twitchPurple, color: "#fff" }}>
+        <button className={className} onClick={() => { const w = window.open(url); w.focus(); }} style={{ backgroundColor: twitchPurple, color: "#fff" }}>
 
 
             <TwitchIcon />
